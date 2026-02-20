@@ -35,7 +35,7 @@ class MultiplierOmp : public Multiplier {
     std::vector<std::vector<double>> values(n);
     std::vector<std::size_t> row_index(n + 1, 0);
 
-#pragma omp parallel shared(n, a, bt, columns, values, row_index) default(none)
+#pragma omp parallel shared(n, a, bt, columns, values, row_index) private(i, j, k) default(none)
     {
       std::vector<int> temp(n);
 #pragma omp for private(j, k)
