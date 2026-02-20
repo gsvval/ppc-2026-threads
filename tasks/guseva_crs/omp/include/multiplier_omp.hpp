@@ -1,7 +1,7 @@
 #pragma once
 #include <omp.h>
 
-#include <algorithm>
+#include <cmath>
 #include <cstddef>
 #include <vector>
 
